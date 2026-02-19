@@ -10,5 +10,5 @@ jobs:
           go-version: 1.26.0
       - run: go work init ; go work use -r . ; go work sync ; go list -m all
       - run: go run ./01-hello-gopher
-      - run: sudo apt-get update -yqq ; sudo apt-get install -yqq jq
+      - run: sudo apt-get install -yqq jq
       - run: go test `go work edit -json | jq -r '.Use[].DiskPath + "/..."'`
