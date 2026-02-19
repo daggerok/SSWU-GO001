@@ -1,4 +1,4 @@
-# SSWU-GO001
+# SSWU-GO001 [![ci](https://github.com/daggerok/SSWU-GO001/actions/workflows/ci.yaml/badge.svg)](https://github.com/daggerok/SSWU-GO001/actions/workflows/ci.yaml)
 
 <!--
 
