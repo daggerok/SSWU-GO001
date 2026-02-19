@@ -4,15 +4,15 @@
 
 ```bash
 mkdir 00-shared-library ; cd $_
-go mod init github.com/daggerok/00-shared-library
+go mod init github.com/daggerok/SSWU-GO001/00-shared-library
 cd ..
 
 mkdir 01-hello-gopher ; cd $_
-go mod init github.com/daggerok/01-hello-gopher
+go mod init github.com/daggerok/SSWU-GO001/01-hello-gopher
 cd ..
 
 mkdir 01-hello-other ; cd $_
-go mod init github.com/daggerok/02-hello-other
+go mod init github.com/daggerok/SSWU-GO001/02-hello-other
 cd ..
 ```
 
