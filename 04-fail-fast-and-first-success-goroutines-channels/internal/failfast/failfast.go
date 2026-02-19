@@ -11,7 +11,7 @@ import (
 
 // FailFast fails with error or timeout if at least one non-success result
 func FailFast(urls []string) (string, error) {
-	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
 
 	g, ctx := errgroup.WithContext(ctx)

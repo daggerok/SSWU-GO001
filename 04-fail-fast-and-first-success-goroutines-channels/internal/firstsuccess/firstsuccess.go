@@ -10,7 +10,7 @@ import (
 
 // FirstSuccess returns first success result and fails with error or timout otherwise
 func FirstSuccess(urls []string) (string, error) {
-	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
 
 	results := make(chan string, len(urls))
