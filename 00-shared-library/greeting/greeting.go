@@ -1,13 +1,15 @@
 package greeting
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 // Greeting prints a message. In Go, we use pointers (*string)
 // to represent a value that could be nil.
-func Greeting(name *string) string {
-	if name == nil || *name == "" {
+func Greeting(name string) string {
+	if name == "" || strings.TrimSpace(name) == "" {
 		return "Hello, Anonymous!"
-	} else {
-		return fmt.Sprintf("Hello, %s!", *name)
 	}
+	return fmt.Sprintf("Hello, %s!", name)
 }

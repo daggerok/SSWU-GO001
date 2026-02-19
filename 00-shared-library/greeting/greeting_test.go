@@ -4,29 +4,28 @@ import (
 	"testing"
 
 	"github.com/daggerok/SSWU-GO001/00-shared-library/greeting"
-	"github.com/daggerok/SSWU-GO001/00-shared-library/testutils"
 )
 
 func TestGreeting(t *testing.T) {
 	// 1. Setup t cases
 	tests := []struct {
 		name     string
-		input    *string
+		input    string
 		expected string
 	}{
 		{
 			name:     "Nil pointer",
-			input:    nil,
+			input:    "",
 			expected: "Hello, Anonymous!",
 		},
 		{
 			name:     "Empty string pointer",
-			input:    testutils.Pointer(""),
+			input:    " \n \t",
 			expected: "Hello, Anonymous!",
 		},
 		{
 			name:     "Valid name",
-			input:    testutils.Pointer("Gopher"),
+			input:    "Gopher",
 			expected: "Hello, Gopher!",
 		},
 	}
