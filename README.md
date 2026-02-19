@@ -28,9 +28,8 @@ go work init ; go work use -r . ; go work sync ; go list -m all
 ## test
 
 ```bash
-go test ./00-shared-library/...
-# or brew reinstall jq
-go test `go work edit -json | jq -r '.Use[].DiskPath + "/..."'`  
+# go test ./00-shared-library/... # or:
+go test `go work edit -json | jq -r '.Use[].DiskPath + "/..."'` # requires "brew reinstall jq"  
 ```
 
 ## run
