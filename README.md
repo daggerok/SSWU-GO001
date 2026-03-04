@@ -28,8 +28,8 @@ go mod init github.com/daggerok/SSWU-GO001/04-primitive-types
 cd ..
 go work init ; go work use -r . ; go work sync ; go list -m all
 
-mkdir 06-functions-methods-structs ; cd $_
-go mod init github.com/daggerok/SSWU-GO001/06-functions-methods-structs
+mkdir 05-functions-methods-structs ; cd $_
+go mod init github.com/daggerok/SSWU-GO001/05-functions-methods-structs
 cd ..
 go work init ; go work use -r . ; go work sync ; go list -m all
 ```
