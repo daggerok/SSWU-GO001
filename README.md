@@ -6,14 +6,32 @@
 mkdir 00-shared-library ; cd $_
 go mod init github.com/daggerok/SSWU-GO001/00-shared-library
 cd ..
+go work init ; go work use -r . ; go work sync ; go list -m all
 
 mkdir 01-hello-gopher ; cd $_
 go mod init github.com/daggerok/SSWU-GO001/01-hello-gopher
 cd ..
+go work init ; go work use -r . ; go work sync ; go list -m all
 
-mkdir 01-hello-other ; cd $_
+mkdir 02-hello-other ; cd $_
 go mod init github.com/daggerok/SSWU-GO001/02-hello-other
 cd ..
+go work init ; go work use -r . ; go work sync ; go list -m all
+
+mkdir 04-fail-fast-and-first-success-goroutines-channels ; cd $_
+go mod init github.com/daggerok/SSWU-GO001/04-fail-fast-and-first-success-goroutines-channels
+cd ..
+go work init ; go work use -r . ; go work sync ; go list -m all
+
+mkdir 05-primitive-types ; cd $_
+go mod init github.com/daggerok/SSWU-GO001/05-primitive-types
+cd ..
+go work init ; go work use -r . ; go work sync ; go list -m all
+
+mkdir 06-functions-methods-structs ; cd $_
+go mod init github.com/daggerok/SSWU-GO001/06-functions-methods-structs
+cd ..
+go work init ; go work use -r . ; go work sync ; go list -m all
 ```
 
 -->
@@ -36,5 +54,5 @@ go test `go work edit -json | jq -r '.Use[].DiskPath + "/..."'` # requires "brew
 
 ```bash
 go run ./01-hello-gopher
-# Hello, Gopher!
+# Hello, G0!
 ```
