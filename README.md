@@ -18,8 +18,8 @@ go mod init github.com/daggerok/SSWU-GO001/02-hello-other
 cd ..
 go work init ; go work use -r . ; go work sync ; go list -m all
 
-mkdir 04-fail-fast-and-first-success-goroutines-channels ; cd $_
-go mod init github.com/daggerok/SSWU-GO001/04-fail-fast-and-first-success-goroutines-channels
+mkdir 03-fail-fast-and-first-success-goroutines-channels ; cd $_
+go mod init github.com/daggerok/SSWU-GO001/03-fail-fast-and-first-success-goroutines-channels
 cd ..
 go work init ; go work use -r . ; go work sync ; go list -m all
 

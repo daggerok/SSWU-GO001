@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/daggerok/SSWU-GO001/04-fail-fast-and-first-success-goroutines-channels/internal/failfast"
-	"github.com/daggerok/SSWU-GO001/04-fail-fast-and-first-success-goroutines-channels/internal/firstsuccess"
+	"github.com/daggerok/SSWU-GO001/03-fail-fast-and-first-success-goroutines-channels/internal/failfast"
+	"github.com/daggerok/SSWU-GO001/03-fail-fast-and-first-success-goroutines-channels/internal/firstsuccess"
 )
 
 func main() {
