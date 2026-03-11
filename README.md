@@ -32,6 +32,16 @@ mkdir 05-functions-methods-structs ; cd $_
 go mod init github.com/daggerok/SSWU-GO001/05-functions-methods-structs
 cd ..
 go work init ; go work use -r . ; go work sync ; go list -m all
+
+mkdir 06-goroutines-and-concurrency-model ; cd $_
+go mod init github.com/daggerok/SSWU-GO001/06-goroutines-and-concurrency-model
+cd ..
+go work init ; go work use -r . ; go work sync ; go list -m all
+
+mkdir 07-concurrency-patterns ; cd $_
+go mod init github.com/daggerok/SSWU-GO001/07-concurrency-patterns
+cd ..
+go work init ; go work use -r . ; go work sync ; go list -m all
 ```
 
 -->
