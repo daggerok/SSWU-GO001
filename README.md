@@ -42,6 +42,11 @@ mkdir 07-concurrency-patterns ; cd $_
 go mod init github.com/daggerok/SSWU-GO001/07-concurrency-patterns
 cd ..
 go work init ; go work use -r . ; go work sync ; go list -m all
+
+mkdir 08-race-conditions-and-mutex ; cd $_
+go mod init github.com/daggerok/SSWU-GO001/08-race-conditions-and-mutex
+cd ..
+go work init ; go work use -r . ; go work sync ; go list -m all
 ```
 
 -->
