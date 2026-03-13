@@ -57,7 +57,10 @@ go work init ; go work use -r . ; go work sync ; go list -m all
 
 ```bash
 # go test ./00-shared-library/... # or:
-go test `go work edit -json | jq -r '.Use[].DiskPath + "/..."'` # requires "brew reinstall jq"  
+go test `go work edit -json | jq -r '.Use[].DiskPath + "/..."'` # requires "brew reinstall jq"
+
+# and with -v flag to see logs output  
+go test -v -race `go work edit -json | jq -r '.Use[].DiskPath + "/..."'` # requires "brew reinstall jq"  
 ```
 
 ## run

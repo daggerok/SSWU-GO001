@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func FanInTest(t *testing.T) {
+func TestFanIn(t *testing.T) {
 	t.Run("should merge results from multiple channels into one", func(t *testing.T) {
 		// given 2 channels
 		ch1 := make(chan string)

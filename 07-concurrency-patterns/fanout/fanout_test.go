@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func FanOutTest(t *testing.T) {
+func TestFanOut(t *testing.T) {
 	t.Run("should distribute tasks across multiple workers", func(t *testing.T) {
 		// given task channel
 		taskCh := make(chan int, 10)
@@ -40,8 +40,9 @@ func FanOutTest(t *testing.T) {
 		}
 
 		// and
-		assert.Len(t, finalResults, nrOfWorkers, "Should have processed all 10 tasks")
+		assert.Len(t, finalResults, 10, "Should have processed all 10 tasks")
 		assert.Contains(t, finalResults, 1, "Should contain the first task result")
-		assert.Contains(t, finalResults, 10, "Should contain the last task result")
+		assert.Contains(t, finalResults, 4, "Should contain the second task result")
+		assert.Contains(t, finalResults, 81, "Should contain the last task result")
 	})
 }
