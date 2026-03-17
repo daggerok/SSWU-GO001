@@ -23,8 +23,8 @@ func main() {
 
 	fmt.Println(">>> RUNNING: FIRST SUCCESS")
 	if res, err := firstsuccess.FirstSuccess(urls); err == nil {
-		fmt.Printf("FIRST SUCCESS WINNER: %s\n", res)
+		fmt.Println("FIRST SUCCESS WINNER:", res)
 	} else {
-		fmt.Printf("FIRST SUCCESS RESULT: %v\n", err)
+		fmt.Println("FIRST SUCCESS RESULT:", err)
 	}
 }

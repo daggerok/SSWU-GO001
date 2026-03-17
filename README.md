@@ -1,5 +1,29 @@
 # SSWU-GO001 [![ci](https://github.com/daggerok/SSWU-GO001/actions/workflows/ci.yaml/badge.svg)](https://github.com/daggerok/SSWU-GO001/actions/workflows/ci.yaml)
 
+## init workspace
+
+```bash
+git clone https://github.com/daggerok/SSWU-GO001.git
+go work init ; go work use -r . ; go work sync ; go list -m all
+```
+
+## test
+
+```bash
+# go test ./00-shared-library/... # or:
+go test `go work edit -json | jq -r '.Use[].DiskPath + "/..."'` # requires "brew reinstall jq"
+
+# and with -v flag to see logs output  
+go test -v -race `go work edit -json | jq -r '.Use[].DiskPath + "/..."'` # requires "brew reinstall jq"  
+```
+
+## run
+
+```bash
+go run ./01-hello-gopher
+# Hello, G0!
+```
+
 <!--
 
 ```bash
@@ -52,30 +76,11 @@ mkdir 08-concurrent-task-management ; cd $_
 go mod init github.com/daggerok/SSWU-GO001/08-concurrent-task-management
 cd ..
 go work init ; go work use -r . ; go work sync ; go list -m all
-```
 
--->
-
-## init workspace
-
-```bash
-git clone https://github.com/daggerok/SSWU-GO001.git
+mkdir 09-go-modules-and-dependency-management ; cd $_
+go mod init github.com/daggerok/SSWU-GO001/09-go-modules-and-dependency-management
+cd ..
 go work init ; go work use -r . ; go work sync ; go list -m all
 ```
 
-## test
-
-```bash
-# go test ./00-shared-library/... # or:
-go test `go work edit -json | jq -r '.Use[].DiskPath + "/..."'` # requires "brew reinstall jq"
-
-# and with -v flag to see logs output  
-go test -v -race `go work edit -json | jq -r '.Use[].DiskPath + "/..."'` # requires "brew reinstall jq"  
-```
-
-## run
-
-```bash
-go run ./01-hello-gopher
-# Hello, G0!
-```
+-->
