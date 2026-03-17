@@ -47,6 +47,11 @@ mkdir 08-race-conditions-and-mutex ; cd $_
 go mod init github.com/daggerok/SSWU-GO001/08-race-conditions-and-mutex
 cd ..
 go work init ; go work use -r . ; go work sync ; go list -m all
+
+mkdir 08-concurrent-task-management ; cd $_
+go mod init github.com/daggerok/SSWU-GO001/08-concurrent-task-management
+cd ..
+go work init ; go work use -r . ; go work sync ; go list -m all
 ```
 
 -->
