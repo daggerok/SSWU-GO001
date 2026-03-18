@@ -10,8 +10,8 @@ import (
 func TestCustomError(t *testing.T) {
 	t.Run("should handle custom error", func(t *testing.T) {
 		_, err := custom.HttpGet()
+		t.Log(err)
 		assert.NotNil(t, err)
 		assert.Equal(t, "Error 404: Not Found", err.Error())
 	})
 }
-
