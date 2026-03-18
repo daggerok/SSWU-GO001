@@ -8,6 +8,8 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+// errors should be used to handle normal Control Flow scenarios, allowing the called to decide how to handle
+// particular situation
 func TestUnwrap(t *testing.T) {
 	t.Run("should unwrap error", func(t *testing.T) {
 		_, err := unwrap.HttpGet()
