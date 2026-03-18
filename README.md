@@ -77,8 +77,8 @@ go mod init github.com/daggerok/SSWU-GO001/08-concurrent-task-management
 cd ..
 go work init ; go work use -r . ; go work sync ; go list -m all
 
-mkdir 09-go-modules-and-dependency-management ; cd $_
-go mod init github.com/daggerok/SSWU-GO001/09-go-modules-and-dependency-management
+mkdir 09-error-handling-in-go ; cd $_
+go mod init github.com/daggerok/SSWU-GO001/09-error-handling-in-go
 cd ..
 go work init ; go work use -r . ; go work sync ; go list -m all
 ```
