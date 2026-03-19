@@ -29,3 +29,7 @@ jobs:
       - run: go run ./10-testing-in-go
       - run: go run ./11-debugging-techniques
       - run: go run ./12-efficient-memory-management-with-pointers-and-slices
+      # Go CG with very high frequency (inefficient)
+      - run: time GOGC=1    go run ./13-techniques-to-optimize-cpu-bound-and-memory-bound-code
+      # Increase threshold to 1000% (help to enhance performance)
+      - run: time GOGC=1000 go run ./13-techniques-to-optimize-cpu-bound-and-memory-bound-code
