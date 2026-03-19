@@ -19,8 +19,7 @@ func TestNewHTTPServer(t *testing.T) {
 
 		go func() {
 			fmt.Println("Server is running on port 8080...")
-			//goland:noinspection GoUnhandledErrorResult
-			server.ListenAndServe()
+			_ = server.ListenAndServe()
 		}()
 
 		client := customclient.NewHTTPClient()
