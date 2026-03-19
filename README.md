@@ -89,6 +89,9 @@ cd .. ; go work init ; go work use -r . ; go work sync ; go list -m all
 
 mkdir 13-techniques-to-optimize-cpu-bound-and-memory-bound-code ; cd $_ ; go mod init github.com/daggerok/SSWU-GO001/13-techniques-to-optimize-cpu-bound-and-memory-bound-code
 cd .. ; go work init ; go work use -r . ; go work sync ; go list -m all
+
+mkdir 14-networking-in-go ; cd $_ ; go mod init github.com/daggerok/SSWU-GO001/14-networking-in-go
+cd .. ; go work init ; go work use -r . ; go work sync ; go list -m all
 ```
 
 -->
