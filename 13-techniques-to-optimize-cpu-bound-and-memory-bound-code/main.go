@@ -36,7 +36,7 @@ func main() {
 	buf := bufferPool.Get().([]byte)
 	fmt.Println("Buffer size:", len(buf))
 
-	// return buffer to hte pool:
+	//nolint:staticcheck // SA6002: сознательно передаем слайс, а не указатель // return buffer to hte pool:
 	bufferPool.Put(buf)
 
 	anotherBuf := bufferPool.Get().([]byte)
