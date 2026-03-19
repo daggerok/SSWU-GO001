@@ -28,6 +28,13 @@ go test -v `go work edit -json | jq -r '.Use[].DiskPath + "/..."'`
 # go tool cover -html=coverage.out
 ```
 
+## lint
+
+```bash
+cd ./12-efficient-memory-management-with-pointers-and-slices ; go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest ; cd ..
+golangci-lint run `go work edit -json | jq -r '.Use[].DiskPath + "/..."'`
+```
+
 ## run
 
 ```bash
@@ -75,6 +82,9 @@ mkdir 10-testing-in-go ; cd $_ ; go mod init github.com/daggerok/SSWU-GO001/10-t
 cd .. ; go work init ; go work use -r . ; go work sync ; go list -m all
 
 mkdir 11-debugging-techniques ; cd $_ ; go mod init github.com/daggerok/SSWU-GO001/11-debugging-techniques
+cd .. ; go work init ; go work use -r . ; go work sync ; go list -m all
+
+mkdir 12-efficient-memory-management-with-pointers-and-slices ; cd $_ ; go mod init github.com/daggerok/SSWU-GO001/12-efficient-memory-management-with-pointers-and-slices
 cd .. ; go work init ; go work use -r . ; go work sync ; go list -m all
 ```
 

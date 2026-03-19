@@ -11,4 +11,21 @@ jobs:
       - run: go work init ; go work use -r . ; go work sync ; go list -m all
       - run: go run ./01-hello-gopher
       - run: sudo apt-get install -yqq jq
+      # test
       - run: go test -v `go work edit -json | jq -r '.Use[].DiskPath + "/..."'`
+      # lint
+      - run: cd ./12-efficient-memory-management-with-pointers-and-slices ; go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest ; cd ..
+      - run: golangci-lint run `go work edit -json | jq -r '.Use[].DiskPath + "/..."'`
+      # run
+      - run: go run ./01-hello-gopher
+      - run: go run ./02-hello-other
+      - run: go run ./03-fail-fast-and-first-success-goroutines-channels
+      - run: go run ./04-primitive-types
+      - run: go run ./05-functions-methods-structs
+      - run: go run ./06-goroutines-and-concurrency-model
+      - run: go run ./07-concurrency-patterns
+      - run: go run ./08-concurrent-task-management
+      - run: go run ./09-error-handling-in-go
+      - run: go run ./10-testing-in-go
+      - run: go run ./11-debugging-techniques
+      - run: go run ./12-efficient-memory-management-with-pointers-and-slices

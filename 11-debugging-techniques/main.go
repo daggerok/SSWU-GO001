@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	log.Divide(10, 0)
-	log.Divide(10, 1)
-	log.Divide(10, 2)
+	_, _ = log.Divide(10, 0)
+	_, _ = log.Divide(10, 1)
+	_, _ = log.Divide(10, 2)
 }
