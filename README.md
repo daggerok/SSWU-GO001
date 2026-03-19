@@ -73,6 +73,9 @@ cd .. ; go work init ; go work use -r . ; go work sync ; go list -m all
 
 mkdir 10-testing-in-go ; cd $_ ; go mod init github.com/daggerok/SSWU-GO001/10-testing-in-go
 cd .. ; go work init ; go work use -r . ; go work sync ; go list -m all
+
+mkdir 11-debugging-techniques ; cd $_ ; go mod init github.com/daggerok/SSWU-GO001/11-debugging-techniques
+cd .. ; go work init ; go work use -r . ; go work sync ; go list -m all
 ```
 
 -->

@@ -11,4 +11,4 @@ jobs:
       - run: go work init ; go work use -r . ; go work sync ; go list -m all
       - run: go run ./01-hello-gopher
       - run: sudo apt-get install -yqq jq
-      - run: go test `go work edit -json | jq -r '.Use[].DiskPath + "/..."'`
+      - run: go test -v `go work edit -json | jq -r '.Use[].DiskPath + "/..."'`
